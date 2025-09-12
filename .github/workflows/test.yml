@@ -1,0 +1,16 @@
+name: Test Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v5
+        # with: si on veut changer le repo par ex
+      - name: Install NodeJS # just academique car la machine ubuntu a deja node
+      # on peut voir les apps déja présent en cliquant sur l'image qu'on veut use
+        uses: actions/setup-node
+        with:
+          node-version: '24'
+      - name: Install dependencies
+        run: npm ci # au lieu de npm install pour avoir la version des dépendances du projet
