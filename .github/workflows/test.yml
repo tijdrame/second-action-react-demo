@@ -5,11 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         # with: si on veut changer le repo par ex
-      - name: Install NodeJS # just academique car la machine ubuntu a deja node
+      - name: Install NodeJS 
+      # just academique car la machine ubuntu a deja node
       # on peut voir les apps déja présent en cliquant sur l'image qu'on veut use
-        uses: actions/setup-node
+        uses: actions/setup-node@master
         with:
           node-version: '24'
       - name: Install dependencies
